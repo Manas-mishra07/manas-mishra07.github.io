@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body style="text-align:center; padding-top:100px; font-family:sans-serif; background:#f2f2f2;">
+
+  <h2>Login Page</h2>
+
+  <form onsubmit="return validateLogin()">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function validateLogin() {
+      var user = document.getElementById("username").value;
+      var pass = document.getElementById("password").value;
+
+      if(user === "manas" && pass === "1234") {
+        window.location.href = "wishing.html";
+        return false;
+      } else {
+        alert("Galat username ya password!");
+        return false;
+      }
+    }
+  </script>
+
+</body>
+</html>
